@@ -7,8 +7,12 @@ workshop.config(function($routeProvider) {
       templateUrl: 'views/index.html',
       controller: 'IndexCtrl'
     })
-    .when('/list', {
-      templateUrl: 'views/list.html',
+    .when('/list-sort', {
+      templateUrl: 'views/list-sort.html',
+      controller: 'ListCtrl'
+    })
+    .when('/list-search', {
+      templateUrl: 'views/list-search.html',
       controller: 'ListCtrl'
     })
     .otherwise({

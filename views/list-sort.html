@@ -1,17 +1,5 @@
 <h1>List</h1>
-Any: <input ng-model="search.$"> <br>
-Name only <input ng-model="search.name"> <br>
-Surname only <input ng-model="search.surname">
-<table>
-  <tr><th>Name</th><th>Surname</th><th>Age</th><tr>
-  <tr ng-repeat="element in list | filter:search">
-  <td>{{element.name}}</td>
-  <td>{{element.surname}}</td>
-  <td>{{element.age}}</td>
-<tr>
-</table>
 
-<hr>
 <input type="radio" ng-model="sort" value="name">Name<br/>
 <input type="radio" ng-model="sort" value="surname">Surname<br/>
 <input type="radio" ng-model="sort" value="age">Age<br/>
