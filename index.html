@@ -5,7 +5,9 @@
     <script src="script/script.js"></script>
   </head>
   <body>
-    <!-- TODO add div with MenuCtrl, and display link -->
+    <div ng-controller="MenuCtrl">
+      <a ng-href="{{href}}">{{text}}</a>
+    </div>
     <div ng-include src="'views/hello.html'">
     </div>
   </body>

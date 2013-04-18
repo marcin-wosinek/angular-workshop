@@ -5,4 +5,7 @@ workshop.controller("HelloCtrl", function($scope) {
   $scope.helloMessage = "Hello world";
 });
 
-// TODO-1 add MenuCtrl, and define data necessary to create a link
+workshop.controller("MenuCtrl", function($scope) {
+  $scope.href = "http://google.pl";
+  $scope.text = "go to google";
+});
