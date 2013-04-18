@@ -22,6 +22,14 @@ workshop.controller("HelloCtrl", function($scope) {
 
 workshop.controller("MenuCtrl", function($scope) {
   // TODO add a list of object with menu possition data
-  $scope.href = "http://google.pl";
-  $scope.text = "go to google";
+  $scope.links = [
+    {
+      url: '#/main',
+      text: 'Main'
+    },
+    {
+      url: '#/hello',
+      text: 'Hello'
+    }
+  ];
 });

@@ -6,8 +6,11 @@
   </head>
   <body>
     <div ng-controller="MenuCtrl">
-      <!-- TODO rewrite link to iterate over links list -->
-      <a ng-href="{{href}}">{{text}}</a>
+      <ul>
+        <li ng-repeat="link in links">
+          <a ng-href="{{link.url}}">{{link.text}}</a>
+        </li>
+      </ul>
     </div>
     <div ng-view>
     </div>
