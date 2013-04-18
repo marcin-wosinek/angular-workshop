@@ -4,6 +4,8 @@ var workshop = angular.module("workshop", []);
 // Create routes
 workshop.config(function($routeProvider) {
   $routeProvider
+    // TODO define path like this one, but use ListCtrl
+    // don't forget about creating new views file
     .when("/hello", {
       templateUrl: "views/hello.html",
       controller: "HelloCtrl"
@@ -20,8 +22,8 @@ workshop.controller("HelloCtrl", function($scope) {
   $scope.helloMessage = "Hello world";
 });
 
+// TODO define ListCtrl, with few elements on list
 workshop.controller("MenuCtrl", function($scope) {
-  // TODO add a list of object with menu possition data
   $scope.links = [
     {
       url: '#/main',
