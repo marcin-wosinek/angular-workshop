@@ -1,0 +1,10 @@
+<table>
+  <tr><th>Picture</th><th>Firstname</th><th>Lastname</th><th>Age</th><th>Gender</th><tr>
+  <tr ng-repeat="person in list">
+    <td><img ng-src='{{person.picture}}'></td>
+    <td>{{person.firstName}}</td>
+    <td>{{person.lastName}}</td>
+    <td>{{person.age}}</td>
+    <td>{{person.gender}}</td>
+  <tr>
+</table>
