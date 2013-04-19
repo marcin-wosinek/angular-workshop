@@ -58,8 +58,15 @@ workshop.controller("ListCtrl", function($scope) {
 ];
 });
 
-workshop.controller("InputCtrl", function($scope) {
-  $scope.value = "Example value";
+// Create serices
+workshop.factory("SharedData", function(){
+    return {
+      value: "Example value"
+    };
+});
+
+workshop.controller("InputCtrl", function ($scope, SharedData) {
+  $scope.sharedData = SharedData;
 });
 
 workshop.controller("MenuCtrl", function($scope) {
