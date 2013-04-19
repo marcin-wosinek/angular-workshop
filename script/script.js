@@ -13,7 +13,8 @@ workshop.config(function($routeProvider) {
       controller: "ListCtrl"
     })
     .when('/main', {
-      templateUrl: 'views/main.html'
+      templateUrl: 'views/main.html',
+      controller: "MainCtrl"
     })
     .otherwise({
       redirectTo: '/main'
@@ -22,6 +23,20 @@ workshop.config(function($routeProvider) {
 
 workshop.controller("HelloCtrl", function($scope) {
   $scope.helloMessage = "Hello world";
+});
+
+workshop.controller("MainCtrl", function($scope) {
+  $scope.firstName = 'Jan';
+  $scope.lastName = 'Kowalski';
+
+  $scope.name = function () {
+    return $scope.firstName + " " + $scope.lastName;
+  }
+
+  $scope.counter = 0;
+  $scope.valueUpdated = function () {
+    $scope.counter++;
+  };
 });
 
 workshop.controller("ListCtrl", function($scope) {

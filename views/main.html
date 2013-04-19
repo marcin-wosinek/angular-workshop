@@ -1,4 +1,8 @@
 <label>Name:</label>
-<input type="text" ng-model="yourName" placeholder="Enter a name here">
+<input type="text" ng-model="firstName" placeholder="Enter a first name here">
+<input type="text" ng-model="lastName" placeholder="Enter a last name here">
 <hr>
-<h1>Hello {{yourName}}!</h1>
+<h1>Hello {{name()}}!</h1>
+<br>
+<input type="text" ng-change="valueUpdated()" ng-model="value" placeholder="Edit me">
+<p>Field has been updated {{counter}} times</p>
