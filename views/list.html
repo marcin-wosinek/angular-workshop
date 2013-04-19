@@ -4,7 +4,7 @@ Age: <input ng-model="orderKey" type='radio' value='age'/><br/>
 Gender: <input ng-model="orderKey" type='radio' value='gender'/>
 <table>
   <tr><th>Picture</th><th>Firstname</th><th>Lastname</th><th>Age</th><th>Gender</th><tr>
-  <tr ng-repeat="person in list | orderBy:orderKey">
+    <tr ng-repeat="person in list | orderBy:orderKey | filter:'oo'">
     <td><img ng-src='{{person.picture}}'></td>
     <td>{{person.firstName}}</td>
     <td>{{person.lastName}}</td>
