@@ -58,6 +58,10 @@ workshop.controller("ListCtrl", function($scope) {
 ];
 });
 
+workshop.controller("InputCtrl", function($scope) {
+  $scope.value = "Example value";
+});
+
 workshop.controller("MenuCtrl", function($scope) {
   $scope.links = [
     {
