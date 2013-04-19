@@ -39,27 +39,28 @@ workshop.controller("MainCtrl", function($scope) {
   };
 });
 
-// TODO Create service People
+workshop.factory("People", function(){
+  // checkout http://www.json-generator.com/
+  return [
+      {
+          "firstName": "Serenity",
+          "lastName": "Oldridge",
+          "picture": "http://placehold.it/70x70/632955",
+          "age": 25,
+          "gender": "female"
+      }
+];
+});
 
-// TODO inject People service
-workshop.controller("ListCtrl", function($scope) {
+workshop.controller("ListCtrl", function($scope, People) {
   $scope.orderBy = 'lastName';
 
-  // checkout http://www.json-generator.com/
   $scope.add = function () {
     $scope.list.push($scope.newPerson);
     $scope.newPerson = {};
   }
-  // TODO get data form service
-  $scope.list = [
-        {
-            "firstName": "Serenity",
-            "lastName": "Oldridge",
-            "picture": "http://placehold.it/70x70/632955",
-            "age": 25,
-            "gender": "female"
-        }
-];
+
+  $scope.list = People;
 });
 
 // Create serices
