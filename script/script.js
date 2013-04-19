@@ -1,5 +1,5 @@
 // Create a new module
-var workshop = angular.module("workshop", []);
+var workshop = angular.module("workshop", ['ngResource']);
 
 // Create routes
 workshop.config(function($routeProvider) {
@@ -39,17 +39,9 @@ workshop.controller("MainCtrl", function($scope) {
   };
 });
 
-workshop.factory("People", function(){
-  // checkout http://www.json-generator.com/
-  return [
-      {
-          "firstName": "Serenity",
-          "lastName": "Oldridge",
-          "picture": "http://placehold.it/70x70/632955",
-          "age": 25,
-          "gender": "female"
-      }
-];
+workshop.factory("People", function($resource){
+  var peopleResource = $resource('data/people', {});
+  return peopleResource.query();
 });
 
 workshop.controller("ListCtrl", function($scope, People) {
