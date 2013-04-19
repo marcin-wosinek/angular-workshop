@@ -43,7 +43,10 @@ workshop.controller("ListCtrl", function($scope) {
   $scope.orderBy = 'lastName';
 
   // checkout http://www.json-generator.com/
-  // TODO define function to react on clicking on 'add person' button
+  $scope.add = function () {
+    $scope.list.push($scope.newPerson);
+    $scope.newPerson = {};
+  }
   $scope.list = [
         {
             "firstName": "Serenity",

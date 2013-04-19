@@ -7,7 +7,17 @@ Gender: <input ng-model="orderKey" type='radio' value='gender'/>
 Everywhere: <input ng-model="search.$" type='text'/><br/>
 First name: <input ng-model="search.firstName" type='text'/><br/>
 Last name: <input ng-model="search.lastName" type='text'/><br/>
-<!-- TODO Add input form for adding person -->
+<br>
+<h2>Add new person</h2>
+<form>
+  Picture: <input ng-model="newPerson.picture" type='text' placeholder="http://"/><br/>
+  First name: <input ng-model="newPerson.firstName" type='text'/><br/>
+  Last name: <input ng-model="newPerson.lastName" type='text'/><br/>
+  Age: <input ng-model="newPerson.age" type='text'/><br/>
+  Male: <input ng-model="newPerson.gender" type='radio' value='male'/><br/>
+  Female: <input ng-model="newPerson.gender" type='radio' value="female"/><br/>
+  <button ng-click="add()">Add person</button>
+</form>
 <table>
   <tr><th>Picture</th><th>Firstname</th><th>Lastname</th><th>Age</th><th>Gender</th><tr>
     <tr ng-repeat="person in list | orderBy:orderKey | filter:search">
