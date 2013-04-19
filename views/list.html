@@ -2,10 +2,14 @@ First name: <input ng-model="orderKey" type='radio' value='firstName'/><br/>
 Last name: <input ng-model="orderKey" type='radio' value='lastName'/><br/>
 Age: <input ng-model="orderKey" type='radio' value='age'/><br/>
 Gender: <input ng-model="orderKey" type='radio' value='gender'/>
-<!-- TODO add form with multiple inputs and ng-models set to 'objectName.attributName' -->
+<br>
+<h2>Search</h2>
+Everywhere: <input ng-model="search.$" type='text'/><br/>
+First name: <input ng-model="search.firstName" type='text'/><br/>
+Last name: <input ng-model="search.lastName" type='text'/><br/>
 <table>
   <tr><th>Picture</th><th>Firstname</th><th>Lastname</th><th>Age</th><th>Gender</th><tr>
-    <tr ng-repeat="person in list | orderBy:orderKey | filter:'oo'">
+    <tr ng-repeat="person in list | orderBy:orderKey | filter:search">
     <td><img ng-src='{{person.picture}}'></td>
     <td>{{person.firstName}}</td>
     <td>{{person.lastName}}</td>
