@@ -39,6 +39,9 @@ workshop.controller("MainCtrl", function($scope) {
   };
 });
 
+// TODO Create service People
+
+// TODO inject People service
 workshop.controller("ListCtrl", function($scope) {
   $scope.orderBy = 'lastName';
 
@@ -47,6 +50,7 @@ workshop.controller("ListCtrl", function($scope) {
     $scope.list.push($scope.newPerson);
     $scope.newPerson = {};
   }
+  // TODO get data form service
   $scope.list = [
         {
             "firstName": "Serenity",
