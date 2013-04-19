@@ -25,6 +25,7 @@ workshop.controller("HelloCtrl", function($scope) {
 });
 
 workshop.controller("ListCtrl", function($scope) {
+  // TODO set up default value of orderKey
   // checkout http://www.json-generator.com/
   $scope.list = [
         {
