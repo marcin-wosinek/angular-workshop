@@ -6,3 +6,9 @@
 <br>
 <input type="text" ng-change="valueUpdated()" ng-model="value" placeholder="Edit me">
 <p>Field has been updated {{counter}} times</p>
+<br>
+<form name="exampleForm">
+  Required field: <input ng-model="required" required/><br>
+  Email field: <input ng-model="email" type="email" required/><br>
+  <button ng-disabled='!exampleForm.$valid'>Submit</button>
+</form>
